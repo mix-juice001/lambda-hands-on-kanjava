@@ -8,6 +8,7 @@ package lambda;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 /**
  *
@@ -42,6 +43,9 @@ public class Main1 {
      * j.u.functionパッケージを用いた0引数〜2引数のラムダ式の書き方
      */
     private void test2() {
+        Supplier<String> sup = () -> "HelloWorld!";
+        System.out.println(sup.get());
+
         Consumer<Integer> con = new Consumer<Integer>() {
             @Override
             public void accept(Integer t) {

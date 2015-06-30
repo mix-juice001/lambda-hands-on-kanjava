@@ -45,25 +45,25 @@ public class Main8 {
                 new Car("マーチ", 1000)
         );
 
-        List<Campany> campanies = Arrays.asList(
-                new Campany(toyotaCar),
-                new Campany(hondaCar),
-                new Campany(nissanCar)
+        List<Company> companies = Arrays.asList(
+                new Company(toyotaCar),
+                new Company(hondaCar),
+                new Company(nissanCar)
         );
 
-        System.out.println(lightCarNames(campanies).stream()
+        System.out.println(lightCarNames(companies).stream()
                 .collect(Collectors.joining(", ")));
     }
     //</editor-fold>
 
     /**
      * すべての会社の自動車のうち，軽自動車(排気量が660cc以下)の名前のリストを取得
-     * @param campanies
+     * @param companies
      * @return
      */
-    private List<String> lightCarNames(List<Campany> campanies) {
+    private List<String> lightCarNames(List<Company> companies) {
         List<String> names = new ArrayList<>();
-        for (Campany campany : campanies) {
+        for (Company campany : companies) {
             for (Car car : campany.getCars()) {
                 if (car.getDisplacement() <= 660) {
                     names.add(car.getName());
@@ -90,10 +90,10 @@ public class Main8 {
         }
     }
 
-    private class Campany {
+    private class Company {
         private List<Car> cars;
 
-        private Campany(List<Car> cars) {
+        private Company(List<Car> cars) {
             this.cars = cars;
         }
 
