@@ -76,6 +76,11 @@ public class Main10 {
         }
     }
 
+    /**
+     * peoplesの性別ごとのPeopleのリストを作ります
+     * @param peoples
+     * @return
+     */
     private Map<People.Gender, List<People>> groupingByGender(List<People> peoples) {
         Map<People.Gender, List<People>> map = new HashMap<>();
 
@@ -94,7 +99,11 @@ public class Main10 {
         return map;
     }
 
-    //         LastName : {FirstName}
+    /**
+     * 苗字(LastName)ごとのPeopleの名前(FirstName)のリストを作ります
+     * @param peoples
+     * @return
+     */
     private Map<String, List<String>> groupingFirstNameByLastName(List<People> peoples) {
         Map<String, List<String>> map = new HashMap<>();
 

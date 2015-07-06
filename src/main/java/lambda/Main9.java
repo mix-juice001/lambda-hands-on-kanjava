@@ -46,6 +46,12 @@ public class Main9 {
         }
     }
 
+    /**
+     * personsの名前を「, 」区切りで連結します
+     * ex: 田中太郎, 山田花子, 佐藤一郎, 小林博樹, 吉田慶貴
+     * @param persons
+     * @return
+     */
     private String joiningName1(List<Person> persons) {
         StringBuilder sb = new StringBuilder();
         for (Iterator<Person> it = persons.iterator(); it.hasNext();) {
@@ -58,6 +64,12 @@ public class Main9 {
         return sb.toString();
     }
 
+    /**
+     * personsの名前を「, 」区切り，[]囲みで連結します
+     * ex: [田中太郎, 山田花子, 佐藤一郎, 小林博樹, 吉田慶貴]
+     * @param persons
+     * @return
+     */
     private String joiningName2(List<Person> persons) {
         StringBuilder sb = new StringBuilder("[");
         for (Iterator<Person> it = persons.iterator(); it.hasNext();) {
